@@ -13,6 +13,16 @@ local plugins = {
         "gotests",
         "impl",
         "iferr",
+
+        -- Typescript
+        "typescript-language-server",
+        "eslint-lsp",
+        "prettier",
+
+        -- SQL
+        "sqlls",
+        "sqlfmt",
+        "sql-formatter",
       },
     },
   },
@@ -25,7 +35,7 @@ local plugins = {
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
-    ft = "go",
+    event = "VeryLazy",
     opts = function()
       return require "custom.configs.null-ls"
     end,
@@ -56,5 +66,6 @@ local plugins = {
       vim.cmd [[silent! GoInstallDeps]]
     end,
   },
+  { "nvim-tree/nvim-web-devicons", lazy = true },
 }
 return plugins

@@ -1,5 +1,5 @@
 local options = {
-  ensure_installed = { "lua", "go", "sql", "dockerfile" },
+  ensure_installed = { "lua", "go", "sql", "dockerfile", "make" },
 
   highlight = {
     enable = true,
